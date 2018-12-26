@@ -1,0 +1,21 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title MiniBlog
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  %body
+    %header
+      %h1 Blog
+      %ul.header__list.clearfix
+        %li
+          %a{:href => "#"} Signin
+        %li
+          %a{:href => "#"} SignOut
+        %li
+          %a{:href => "#"} New
+    %article
+      = yield
