@@ -1,0 +1,59 @@
+.clearfix:after{
+  display: block;
+  content: "";
+  clear: both;
+}
+
+header {
+  height: 100px;
+  color: white;
+  background-color: #3e5e3e;
+  h1 {
+    float: left;
+    margin: 0;
+    padding-left: 30px;
+    line-height: 100px;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    line-height: 100px;
+    float: right;
+    li {
+      float: left;
+      list-style: none;
+      padding: 0 20px 0;
+      a {
+        text-decoration: none;
+        color: white;
+      }
+    }
+  }
+}
+
+.body {
+  border: 1px solid black;
+  margin: 30px auto;
+  width: 800px;
+  min-height: 150px;
+  padding: 0 30px 0;
+  position: relative;
+  &__text {
+    padding-bottom: 40px;
+  }
+  &__action {
+    position: absolute;
+    bottom: 20px;
+    a {
+      text-decoration: none;
+      padding: 10px 20px;
+      background-color: #3e5e3e;
+      color: white;
+      border-radius: 10px;
+      margin-right: 10px;
+    }
+  }
+}
+
+
+
