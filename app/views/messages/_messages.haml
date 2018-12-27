@@ -6,5 +6,4 @@
       SHOW
     %a.body__action--edit{href: "#"}
       EDIT
-    %a.body__action--destroy{href: "#"}
-      DESTROY
+    = link_to "DESTROY", message_path(message.id), method: :delete
