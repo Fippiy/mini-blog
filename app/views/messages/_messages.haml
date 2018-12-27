@@ -2,7 +2,6 @@
   %p.body__text
     = message.message
   .body__action
-    %a.body__action--show{href: "#"}
-      SHOW
+    = link_to "SHOW", message_path(message.id)
     = link_to "EDIT", edit_message_path(message.id)
     = link_to "DESTROY", message_path(message.id), method: :delete
