@@ -1,4 +1,5 @@
 .form-body
   = form_for @message do |f|
-    = f.text_field :message
+    = f.text_area :message
+    %br
     = f.submit "Send"
