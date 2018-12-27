@@ -12,6 +12,12 @@ class MessagesController < ApplicationController
     redirect_to :root
   end
 
+  def destroy
+    message = Message.find(params[:id])
+    message.destroy if message.user_id == current_user.id
+    redirect_to :root
+  end
+
   private
   def message_params
     # binding.pry
