@@ -29,6 +29,10 @@ class MessagesController < ApplicationController
     redirect_to :root
   end
 
+  def show
+    @message = Message.find(params[:id])
+  end
+
   private
   def message_params
     # binding.pry
