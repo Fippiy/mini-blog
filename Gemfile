@@ -65,3 +65,9 @@ gem 'devise'
 
 gem 'haml-rails'
 gem 'erb2haml'
+
+group :development, :test do
+  gem 'pry-rails'
+  gem 'pry-byebug'
+  gem 'pry-doc'
+end
