@@ -31,6 +31,8 @@ class MessagesController < ApplicationController
 
   def show
     @message = Message.find(params[:id])
+    @comments = @message.comments.includes(:user).order('id DESC')
+    @comment = Comment.new
   end
 
   private
