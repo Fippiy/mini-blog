@@ -16,6 +16,6 @@
         %li
           %a{:href => "#"} SignOut
         %li
-          %a{:href => "#"} New
+          = link_to "New", new_message_path
     %article
       = yield
