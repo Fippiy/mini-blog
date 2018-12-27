@@ -3,5 +3,6 @@
     = message.message
   .body__action
     = link_to "SHOW", message_path(message.id)
-    = link_to "EDIT", edit_message_path(message.id)
-    = link_to "DESTROY", message_path(message.id), method: :delete
+    - if user_signed_in? && current_user.id == message.user_id
+      = link_to "EDIT", edit_message_path(message.id)
+      = link_to "DESTROY", message_path(message.id), method: :delete
