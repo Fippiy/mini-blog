@@ -4,11 +4,9 @@
   = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
     .field.clearfix
       = f.label :email
-      / %br/
       = f.email_field :email, autofocus: true, autocomplete: "email"
     .field.clearfix
       = f.label :password
-      / %br/
       = f.password_field :password, autocomplete: "current-password"
     - if devise_mapping.rememberable?
       .field.clearfix
@@ -16,4 +14,3 @@
         = f.check_box :remember_me
     .actions.clearfix
       = f.submit "Log in"
-  / = render "devise/shared/links"

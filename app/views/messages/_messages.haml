@@ -1,7 +1,7 @@
-.body
-  %p.body__text
+.message
+  %p.message__text
     = message.message
-  .body__action
+  .message__action
     = link_to "SHOW", message_path(message.id)
     - if user_signed_in? && current_user.id == message.user_id
       = link_to "EDIT", edit_message_path(message.id)
