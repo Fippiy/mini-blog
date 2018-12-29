@@ -13,7 +13,7 @@ a {
     z-index: 2;
     width: 100%;
     height: 100px;
-    background-color: #3e5e3e;
+    @include bg-gradient;
     line-height: 100px;
     &__title {
       float: left;
