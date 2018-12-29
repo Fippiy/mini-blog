@@ -8,17 +8,20 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
-    %header
-      %h1
-        = link_to "Blog", root_path
-      %ul.header__list.clearfix
-        - if user_signed_in?
-          %li
-            = link_to "New", new_message_path
-          %li
-            = link_to "SignOut",destroy_user_session_path, method: :delete
-        - else
-          %li
-            = link_to "Signin", new_user_session_path
-    %article
-      = yield
+    .contents
+      %header.header
+        %h1.header__title
+          = link_to "Blog", root_path
+        %ul.header__menu-list.clearfix
+          - if user_signed_in?
+            %li.menu
+              = link_to "New", new_message_path
+            %li.menu
+              = link_to "SignOut",destroy_user_session_path, method: :delete
+          - else
+            %li.menu
+              = link_to "SignUp", new_user_registration_path
+            %li.menu
+              = link_to "SignIn", new_user_session_path
+      .body
+        = yield
