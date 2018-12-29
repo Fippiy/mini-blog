@@ -5,23 +5,16 @@
     = devise_error_messages!
     .field.clearfix
       = f.label :nickname
-      / %br/
       = f.text_field :nickname, autofocus: true, autocomplete: "nickname"
     .field.clearfix
       = f.label :email
-      / %br/
       = f.email_field :email, autocomplete: "email"
     .field.clearfix
       = f.label :password
       - if @minimum_password_length
-        / %em
-        /   (#{@minimum_password_length} characters minimum)
-      / %br/
-      = f.password_field :password, autocomplete: "new-password", placeholder: "#{@minimum_password_length} characters minimum"
+        = f.password_field :password, autocomplete: "new-password", placeholder: "#{@minimum_password_length} characters minimum"
     .field.clearfix
       = f.label :password_confirmation
-      / %br/
       = f.password_field :password_confirmation, autocomplete: "new-password"
     .actions.clearfix
       = f.submit "Sign up"
-  / = render "devise/shared/links"
