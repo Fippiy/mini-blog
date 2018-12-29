@@ -1,54 +1,20 @@
-// * {
-//   color: #6a8e4f;
-// }
-
-.clearfix:after{
-  display: block;
-  content: "";
-  clear: both;
-}
-
 .devise {
-  margin: 20px auto;
-  // padding: 0 auto;
-  width: 700px;
-  // border: 1px solid black;
   &__title {
+    margin: 20px 0;
     text-align: center;
-    // border: 1px solid green;
   }
   .new_user {
-    // width: 80%;
-    margin: 0 auto;
-    // border: 1px solid yellow;
     .field {
       margin-bottom: 20px;
+      font-size: 20px;
       label {
         float: left;
-        height: 30px;
         width: 300px;
-        font-size: 20px;
-        // text-align: center;
         color: blue;
-        border: 1px solid pink;
       }
       input {
         float: left;
-        // margin-top: 10px;
-        padding: 0;
-        font-size: 20px;
-        height: 30px;
-        width: 300px;
-      }
-      // input[type = "checkbox"] {
-      //   float:left;
-      //   border: 1px solid black;
-      // }
-    }
-    .actions {
-      float: right;
-      border: 1px solid red;
-      .submit {
+        width: 400px;
       }
     }
   }
