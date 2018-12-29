@@ -7,12 +7,6 @@ a {
   color: white;
 }
 
-.clearfix:after{
-  display: block;
-  content: "";
-  clear: both;
-}
-
 .contents {
   .header {
     position: fixed;
@@ -67,30 +61,6 @@ a {
         &--text {
           color: #777777;
         }
-      }
-    }
-    form {
-      margin: 50px auto;
-      width: 800px;
-      height: 300px;
-      #message_message {
-        width: 800px;
-        height: 250px;
-        resize: none;
-      }
-      &#new_comment {
-        height: 150px;
-      }
-      #comment_comment {
-        width: 800px;
-        height: 100px;
-      }
-      input[type="submit"] {
-        float: right;
-        padding: 10px 20px;
-        background-color: #3e5e3e;
-        border-radius: 10px;
-        color: white;
       }
     }
   }
