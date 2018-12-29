@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   resources :messages do
     resources :comments, only: :create
   end
+  resources :users, only: :show
 end
