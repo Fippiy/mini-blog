@@ -6,3 +6,5 @@
     - if user_signed_in? && current_user.id == message.user_id
       = link_to "EDIT", edit_message_path(message.id)
       = link_to "DESTROY", message_path(message.id), method: :delete
+  .message__name
+    = link_to "#{message.user.nickname}さん", user_path(message.user.id), class: :user

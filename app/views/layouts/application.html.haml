@@ -9,13 +9,18 @@
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
     .contents
-      %header.header
+      %header.header.clearfix
         %h1.header__title
           = link_to "Blog", root_path
+        %h2.header__user-name
+          - if user_signed_in?
+            = "ログイン中：#{current_user.nickname}さん"
         %ul.header__menu-list.clearfix
           - if user_signed_in?
             %li.menu
               = link_to "New", new_message_path
+            %li.menu
+              = link_to "MyPage", user_path(current_user.id)
             %li.menu
               = link_to "SignOut",destroy_user_session_path, method: :delete
           - else
