@@ -1,21 +1,28 @@
+@mixin devise-setting {
+  .field {
+    margin-bottom: 20px;
+    font-size: 20px;
+    label {
+      float: left;
+      width: 300px;
+      color: blue;
+    }
+    input {
+      float: left;
+      width: 400px;
+    }
+  }
+}
+
 .devise {
   &__title {
     margin: 20px 0;
     text-align: center;
   }
   .new_user {
-    .field {
-      margin-bottom: 20px;
-      font-size: 20px;
-      label {
-        float: left;
-        width: 300px;
-        color: blue;
-      }
-      input {
-        float: left;
-        width: 400px;
-      }
-    }
+    @include devise-setting;
+  }
+  .edit_user {
+    @include devise-setting;
   }
 }
