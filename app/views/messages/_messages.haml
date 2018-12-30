@@ -2,7 +2,10 @@
   %p.message__text
     = message.message
   .message__action
-    = link_to "SHOW", message_path(message.id)
+    - if message.comments.length > 0
+      = link_to "SHOW", message_path(message.id), class: :in_message
+    - else
+      = link_to "SHOW", message_path(message.id)
     - if user_signed_in? && current_user.id == message.user_id
       = link_to "EDIT", edit_message_path(message.id)
       = link_to "DESTROY", message_path(message.id), method: :delete
