@@ -61,6 +61,9 @@ a {
           padding: 10px 20px;
           background-color: #3e5e3e;
           border-radius: 10px;
+          &.in_message{
+            background-color: #3ebb3e;
+          }
         }
       }
       &__comments {
