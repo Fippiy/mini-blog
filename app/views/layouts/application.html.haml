@@ -22,6 +22,8 @@
             %li.menu
               = link_to "MyPage", user_path(current_user.id)
             %li.menu
+              = link_to "Edit", edit_user_registration_path
+            %li.menu
               = link_to "SignOut",destroy_user_session_path, method: :delete
           - else
             %li.menu
