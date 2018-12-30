@@ -15,8 +15,15 @@ class MessagesController < ApplicationController
 
   def destroy
     message = Message.find(params[:id])
-    message.destroy if message.user_id == current_user.id
+    if message.user_id == current_user.id
+      if message.comments.length > 0
+        message.comments.each do |comment|
+          comment.destroy
+        end
+      end
+      message.destroy
     redirect_to :root
+    end
   end
 
   def edit
