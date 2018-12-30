@@ -15,6 +15,8 @@
         %h2.header__user-name
           - if user_signed_in?
             = "ログイン中：#{current_user.nickname}さん"
+          - else
+            ログインしていません。
         %ul.header__menu-list.clearfix
           - if user_signed_in?
             %li.menu
