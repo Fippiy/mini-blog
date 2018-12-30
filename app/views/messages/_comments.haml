@@ -1,3 +1,7 @@
 .message__comments
   %p.message__comments--text
+    = "#{comment.user.nickname} : "
     = comment.comment
+    %br
+    - if user_signed_in? && current_user.id == comment.user_id
+      = link_to "[del]", message_comment_path(comment.message_id,comment.id), method: :delete
