@@ -1,11 +1,12 @@
 = render "messages", message: @message
 
 - if current_user
-  = form_for [@message, @comment] do |f|
+  = form_for [@message, @comment],remote: true do |f|
     = f.text_area :comment
     %br
     = f.submit "Send"
 
-- @comments.each do |comment|
-  = render "comments", comment: comment
+.comment
+  - @comments.each do |comment|
+    = render "comments", comment: comment
 
