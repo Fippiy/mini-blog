@@ -65,6 +65,7 @@ gem 'devise'
 
 gem 'haml-rails'
 gem 'erb2haml'
+gem 'jquery-rails'
 
 group :development, :test do
   gem 'pry-rails'
