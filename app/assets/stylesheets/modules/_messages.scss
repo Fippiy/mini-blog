@@ -73,6 +73,14 @@ a {
         padding-top: 5px;
         font-size: 15px;
         word-wrap:break-word;
+        &--new {
+          background-color: #009999;
+          margin: 40px auto;
+          width: 800px;
+          padding: 5px;
+          font-size: 25px;
+          word-wrap:break-word;
+        }
         &--text {
           color: #777777;
         }
