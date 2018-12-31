@@ -1,15 +1,15 @@
 class CommentsController < ApplicationController
   def create
     @comment = Comment.create(comment_params)
-    # @comment = Comment.create(comment: "comment", user_id: 1, message_id: 17)
-    # redirect_to root_path
-    redirect_to message_path(@comment.message_id)
+    # redirect_to message_path(@comment.message_id)
+    render json: @comment
   end
 
   def destroy
-    comment = Comment.find(params[:id])
-    comment.destroy if comment.user_id == current_user.id
-    redirect_to message_path(comment.message_id)
+    @comment = Comment.find(params[:id])
+    @comment.destroy if @comment.user_id == current_user.id
+    # redirect_to message_path(comment.message_id)
+    render json: @comment
   end
 
   private
