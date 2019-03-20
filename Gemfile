@@ -66,6 +66,7 @@ gem 'devise'
 gem 'haml-rails'
 gem 'erb2haml'
 gem 'jquery-rails'
+gem 'rb-readline'
 
 group :development, :test do
   gem 'pry-rails'
